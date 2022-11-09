@@ -1,13 +1,15 @@
-import { useQuery } from "@tanstack/react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import api from "../constants/routes";
 
-export const fetchPhotos = async (page = 1, orderBy = "latest") => {
-  const res = await fetch(api.photos(page, orderBy), {
+export const fetchPhotos = async ({ pageParam = 1, orderBy = "latest" }) => {
+  const httpOptions = {
     headers: {
-      Authorization: "Client-ID WY4o2ZWlJO9gV59aQPDbXs2D5pVxiIzLfXbpwL7xgrc",
-      // Authorization: `${process.env.AUTHORIZATION_TOKEN}}`,
+      Authorization: `${process.env.API_KEY}`,
     },
-  });
+  };
+
+  const res = await fetch(api.photos(pageParam, orderBy), httpOptions);
+
   if (!res.ok) throw new Error("Error!");
 
   const data = await res.json();
@@ -15,6 +17,8 @@ export const fetchPhotos = async (page = 1, orderBy = "latest") => {
   return data;
 };
 
-export const useFetchPhotos = (page?: number, orderBy?: string) => {
-  return useQuery(["photos", page, orderBy], () => fetchPhotos(page, orderBy));
-};
+// export const useFetchPhotos = (page?: number, orderBy?: string) => {
+//   return useInfiniteQuery(["photos", page, orderBy], () =>
+//     fetchPhotos(page, orderBy)
+//   );
+// };
