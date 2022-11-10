@@ -1,4 +1,4 @@
-import PhotosList from "./components/PhotosList";
+import PhotosList from "./PhotosList";
 import strings from "../src/constants/strings";
 
 const Home = () => {

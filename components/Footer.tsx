@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { nav } from "../src/constants/nav";
 import strings from "../src/constants/strings";
 
 const Footer = () => {
@@ -9,11 +10,13 @@ const Footer = () => {
           {`© ${new Date().getFullYear()} ${strings.allRightsReserved}`}
         </span>
         <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
-          <li>
-            <Link href="/" className="mr-4 hover:underline md:mr-6 ">
-              Home
-            </Link>
-          </li>
+          {nav.map((item) => (
+            <li key={item.title}>
+              <Link href={item.link} className="mr-4 hover:underline md:mr-6 ">
+                {item.title}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </footer>

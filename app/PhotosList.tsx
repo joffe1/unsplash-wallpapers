@@ -4,13 +4,13 @@ import { Fragment, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { fetchPhotos } from "../../src/api/fetchPhotos";
-import Loading from "../loading";
-import Error from "../error";
-import type { IPhoto } from "../../src/types";
-import instagramIcon from "../../src/assets/instagram.png";
-import likesIcon from "../../src/assets/likes.png";
-import strings from "../../src/constants/strings";
+import { fetchPhotos } from "../src/api/fetchPhotos";
+import instagramIcon from "../src/assets/instagram.png";
+import likesIcon from "../src/assets/likes.png";
+import type { IPhoto } from "../src/types";
+import Loading from "./loading";
+import Error from "./error";
+import strings from "../src/constants/strings";
 
 const PhotosList = () => {
   const [orderBy, setOrderBy] = useState("");

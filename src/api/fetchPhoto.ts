@@ -1,8 +1,8 @@
 import api from "../constants/routes";
 import { httpOptions } from "./httpOptions";
 
-export const fetchPhotos = async ({ pageParam = 1, orderBy = "latest" }) => {
-  const res = await fetch(api.photos(pageParam, orderBy), httpOptions);
+export const fetchPhoto = async (id: string) => {
+  const res = await fetch(api.photoDetails(id), httpOptions);
 
   if (!res.ok) throw new Error("Error!");
 

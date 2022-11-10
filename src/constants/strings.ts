@@ -4,6 +4,10 @@ const strings = {
   fetchError: "Couldn't fetch data, please try again or report the issue.",
   author: "Author",
   loadMore: "Load More",
+  loading: "Loading",
+  goBack: "Go Back",
+  downloads: "Downloads",
+  views: "Views",
 };
 
 export default strings;
