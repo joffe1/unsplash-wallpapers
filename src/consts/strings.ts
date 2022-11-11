@@ -8,6 +8,8 @@ const strings = {
   goBack: "Go Back",
   downloads: "Downloads",
   views: "Views",
+  sort: "Sort",
+  search: "Search",
 };
 
 export default strings;

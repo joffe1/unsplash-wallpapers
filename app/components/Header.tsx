@@ -1,15 +1,15 @@
 import Link from "next/link";
-import { nav } from "../src/constants/nav";
+import { nav } from "../../src/consts/nav";
 
 const Header = () => {
   return (
     <header>
       <nav className="bg-black p-4">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+        <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
           {nav.map((item) => (
             <Link
               href={item.link}
-              className="px-2 py-1 mr-2 bg-white rounded"
+              className="mr-2 rounded bg-white px-2 py-1"
               key={item.title}
             >
               {item.title}

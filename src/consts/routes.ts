@@ -1,4 +1,4 @@
-const baseUrl: string = `https://api.unsplash.com`;
+import { baseUrl } from "../api/http-common";
 
 const api = {
   photos: (page?: number, orderBy?: string) =>

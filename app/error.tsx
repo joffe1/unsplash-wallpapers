@@ -1,6 +1,6 @@
 "use client";
 
-import strings from "../src/constants/strings";
+import strings from "../src/consts/strings";
 
 const Error = () => {
   return (

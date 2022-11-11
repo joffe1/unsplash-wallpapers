@@ -1,14 +1,15 @@
-import PhotosList from "./PhotosList";
-import strings from "../src/constants/strings";
+import { Title } from "../components";
+import { PhotosFilter, PhotosList, LoadMoreButton } from "./components";
+import strings from "../src/consts/strings";
 
 const Home = () => {
   return (
-    <div className="my-5 mx-auto max-w-screen-xl">
-      <h1 className="text-4xl font-bold mt-8 mb-16">
-        {strings.unsplashWallpapers}
-      </h1>
+    <main className="mx-auto max-w-screen-xl">
+      <Title title={strings.unsplashWallpapers} />
+      {/* <PhotosFilter /> */}
       <PhotosList />
-    </div>
+      <LoadMoreButton />
+    </main>
   );
 };
 
