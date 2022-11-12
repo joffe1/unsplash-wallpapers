@@ -2,7 +2,7 @@ import strings from '../src/consts/strings';
 
 const Loading = () => {
   return (
-    <div className="my-5 mx-auto max-w-screen-xl">{`${strings.loading}.....`}</div>
+    <div className="my-8 mx-auto max-w-screen-xl">{`${strings.loading}.....`}</div>
   );
 };
 

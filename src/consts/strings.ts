@@ -10,6 +10,7 @@ const strings = {
   views: 'Views',
   sort: 'Sort',
   search: 'Search',
+  photoDetails: 'Photo Details',
 };
 
 export default strings;

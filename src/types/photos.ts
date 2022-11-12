@@ -4,6 +4,8 @@ export interface IPhoto {
   updated_at: string;
   likes: number;
   description: string;
+  downloads: number;
+  views: number;
   urls: {
     raw: string;
     regular: string;
