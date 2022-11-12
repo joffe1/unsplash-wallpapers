@@ -1,1 +1,1 @@
-export const sortValues = ["latest", "oldest", "popular"];
+export const sortValues = ['latest', 'oldest', 'popular'];

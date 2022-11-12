@@ -1,4 +1,4 @@
-import strings from "../src/consts/strings";
+import strings from '../src/consts/strings';
 
 const Loading = () => {
   return (

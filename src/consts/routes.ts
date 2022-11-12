@@ -1,4 +1,4 @@
-import { baseUrl } from "../api/http-common";
+import { baseUrl } from '../api/httpCommon';
 
 const api = {
   photos: (page?: number, orderBy?: string) =>

@@ -1,1 +1,1 @@
-export type { IPhoto } from "./photos";
+export type { IPhoto } from './photos';

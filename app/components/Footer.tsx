@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { nav } from "../../src/consts/nav";
-import strings from "../../src/consts/strings";
+import Link from 'next/link';
+import { nav } from '../../src/consts/nav';
+import strings from '../../src/consts/strings';
 
 const Footer = () => {
   return (

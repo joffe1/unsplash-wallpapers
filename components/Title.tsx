@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 interface IProps {
   title: string;
@@ -6,7 +6,7 @@ interface IProps {
 
 const Title: FC<IProps> = ({ title }) => {
   return (
-    <h1 className="my-8 text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
+    <h1 className="my-16 text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
       {title}
     </h1>
   );

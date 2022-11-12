@@ -1,4 +1,4 @@
-import { FC, ChangeEvent } from "react";
+import { FC, ChangeEvent } from 'react';
 
 interface IProps {
   label: string;
@@ -8,8 +8,8 @@ interface IProps {
 
 const Select: FC<IProps> = ({ label, options, onChange }) => {
   return (
-    <select onChange={onChange}>
-      <option>{label}</option>
+    <select onChange={onChange} className="mx-8 cursor-pointer">
+      <option value="">{label}</option>
       {options.map((option, i) => (
         <option key={i} value={option}>
           {option}

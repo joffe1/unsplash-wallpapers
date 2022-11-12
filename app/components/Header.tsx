@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { nav } from "../../src/consts/nav";
+import Link from 'next/link';
+import { nav } from '../../src/consts/nav';
 
 const Header = () => {
   return (

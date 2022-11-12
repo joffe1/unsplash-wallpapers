@@ -1,7 +1,7 @@
-import "../styles/globals.css";
-import ReactQueryWrapper from "./ReactQueryWrapper";
-import { Header, Footer } from "./components";
-import Head from "./head";
+import '../styles/globals.css';
+import ReactQueryWrapper from './ReactQueryWrapper';
+import { Header, Footer } from './components';
+import Head from './head';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
