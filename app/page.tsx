@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useGetPhotos } from '../src/api/queries';
 import { Title } from '../components';
 import { Filter, List, LoadMoreButton } from './components';
+import type { IPhoto } from '../src/types';
 import strings from '../src/consts/strings';
 
 const Home = () => {
@@ -15,20 +16,17 @@ const Home = () => {
     fetchNextPage,
     hasNextPage,
     isFetchingNextPage,
-    isSuccess,
     isLoading,
     isError,
   } = useGetPhotos(sort);
+
+  const photos = data?.pages as IPhoto[][];
 
   return (
     <main className="mx-auto max-w-screen-xl">
       <Title title={strings.unsplashWallpapers} />
       <Filter setSort={setSort} refetch={refetch} />
-      <List
-        data={isSuccess ? data?.pages : []}
-        isLoading={isLoading}
-        isError={isError}
-      />
+      <List data={photos} isLoading={isLoading} isError={isError} />
       <LoadMoreButton
         onClick={() => fetchNextPage()}
         hasNextPage={hasNextPage}
